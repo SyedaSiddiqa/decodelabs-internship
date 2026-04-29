@@ -1,0 +1,150 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      height: 130px;
+      background: #432600;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-image: url(https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D);
+      height: 260px;
+      background-size: cover;
+     background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #b49267;
+      font-weight: bold;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      border: none;
+      background: #532f00;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Content Grid */
+    .content {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+/* Tall cards span 2 rows */
+.tall {
+  grid-row: span 2;
+}
+
+.tall img {
+  height: 250px;
+}
+
+/* Small cards */
+.small img {
+  height: 100px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+    /* Footer */
+    footer {
+      height: 200px;
+      background: #432600;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+
+      height: 100px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
